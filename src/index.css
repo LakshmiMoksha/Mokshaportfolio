@@ -143,6 +143,10 @@
 }
 
 @layer utilities {
+  .ease-spring {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1.4);
+  }
+
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }

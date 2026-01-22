@@ -88,33 +88,45 @@ export const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/50 transition-all duration-300 ${isMobileMenuOpen
-          ? 'opacity-100 visible translate-y-0'
-          : 'opacity-0 invisible -translate-y-4'
+        className={`md:hidden fixed inset-0 z-40 bg-background/60 backdrop-blur-sm transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
+      <div
+        className={`md:hidden fixed top-[80px] left-4 right-4 z-50 transition-all duration-500 ease-spring ${isMobileMenuOpen
+          ? 'opacity-100 visible translate-y-0 scale-100'
+          : 'opacity-0 invisible -translate-y-8 scale-95'
           }`}
       >
-        <div className="container-custom py-4 space-y-2">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => scrollToSection(link.href)}
-              className="block w-full text-left px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
-            >
-              {link.name}
-            </button>
-          ))}
-          <div className="pt-2">
-            <div className="flex items-center gap-4 justify-between">
-              <ModeToggle />
-              <Button
-                variant="default"
-                className="flex-1"
-                onClick={() => scrollToSection('#contact')}
+        <div className="glass-card-elevated overflow-hidden p-2">
+          <div className="flex flex-col gap-1">
+            {navLinks.map((link, index) => (
+              <button
+                key={link.name}
+                onClick={() => scrollToSection(link.href)}
+                className={`flex items-center w-full px-5 py-4 text-base font-medium text-foreground/80 hover:text-primary hover:bg-primary/10 rounded-xl transition-all duration-300 group ${isMobileMenuOpen ? 'animate-fade-up' : ''
+                  }`}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                Get in Touch
-              </Button>
+                <span className="flex-1 text-left">{link.name}</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
+            ))}
+
+            <div className="mt-2 pt-2 border-t border-border/50">
+              <div className="flex items-center gap-3 p-2">
+                <ModeToggle />
+                <Button
+                  variant="default"
+                  className="flex-1 h-12 rounded-xl bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity font-semibold"
+                  onClick={() => scrollToSection('#contact')}
+                >
+                  Get in Touch
+                </Button>
+              </div>
             </div>
           </div>
         </div>
