@@ -8,7 +8,7 @@ export const aboutData = {
         'Through diverse projects ranging from interactive web applications to AI-powered educational tools, I have developed a comprehensive skill set that enables me to tackle complex challenges and deliver impactful solutions.',
     ],
     stats: [
-        { label: 'Projects Built', value: '3+' },
+        { label: 'Projects Built', value: '12+' },
         { label: 'Certified', value: 'SAP' },
         { label: 'CSE Graduate', value: 'B.Tech' },
     ],

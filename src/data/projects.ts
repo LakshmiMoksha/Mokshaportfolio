@@ -1,5 +1,5 @@
 
-import { Code, TrendingUp, Brain, Tv } from 'lucide-react';
+import { Code, TrendingUp, Brain, Tv, Shield, Briefcase } from 'lucide-react';
 import { Project } from '../types/portfolio';
 
 export const projects: Project[] = [
@@ -38,5 +38,23 @@ export const projects: Project[] = [
         icon: Tv,
         gradient: 'from-fuchsia-500/20 to-pink-500/20',
         github: 'https://github.com/Moksha-132/Jimoflix-OTT-Platform-Clone',
+    },
+    {
+        title: 'Cyber Attack Detection in WSNs',
+        description:
+            'A machine learning-powered web application for detecting cyber attacks in Wireless Sensor Networks. Uses a unified ensemble model trained on the WSN-DS dataset to classify network intrusions with high accuracy. Features a Flask backend, interactive dashboard, and real-time attack report generation.',
+        techStack: ['Python', 'Flask', 'Machine Learning', 'Cooja Simulator', 'SQLite'],
+        icon: Shield,
+        gradient: 'from-emerald-500/20 to-teal-500/20',
+        github: 'https://github.com/Moksha-132/Cyber-Attack-Detection-in-WSNs',
+    },
+    {
+        title: 'HireHub – Job Portal',
+        description:
+            'A full-stack AI-powered job portal with multi-role dashboards for Admins, Managers, and Users. Features an AI Concierge chatbot with reinforcement learning, real-time profile management, and a 3-service architecture using FastAPI, React, and a custom-trained NLP model.',
+        techStack: ['React', 'FastAPI', 'Python', 'NLP/ML', 'Node.js'],
+        icon: Briefcase,
+        gradient: 'from-orange-500/20 to-amber-500/20',
+        github: 'https://github.com/Moksha-132/HireHub---Job-Portal-',
     },
 ];

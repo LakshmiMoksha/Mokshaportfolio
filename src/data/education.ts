@@ -8,7 +8,7 @@ export const education: Education[] = [
         field: 'Computer Science and Engineering (Data Science)',
         institution: 'Srinivasa Ramanujan Institute Of Technology',
         period: '2022 - 2026',
-        cgpa: '9.10 CGPA',
+        cgpa: '9.17 CGPA',
         icon: GraduationCap,
         highlights: [
             'Specialized in Data Science and Machine Learning',
