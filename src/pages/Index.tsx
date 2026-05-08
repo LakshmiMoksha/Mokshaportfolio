@@ -8,6 +8,7 @@ import { EducationSection } from '@/components/EducationSection';
 import { CertificationsSection } from '@/components/CertificationsSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+import { ExperienceSection } from '@/components/ExperienceSection';
 import { Reveal } from '@/components/Reveal';
 import { AIInsights } from '@/components/AIInsights';
 import { Helmet } from 'react-helmet-async';
@@ -37,6 +38,9 @@ const Index = () => {
           </Reveal>
           <Reveal>
             <AboutSection />
+          </Reveal>
+          <Reveal>
+            <ExperienceSection />
           </Reveal>
           <Reveal>
             <SkillsSection />

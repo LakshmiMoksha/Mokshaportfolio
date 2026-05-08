@@ -18,6 +18,7 @@ export interface Project {
     icon: LucideIcon;
     gradient: string;
     github: string;
+    demo?: string;
 }
 
 export interface Education {
@@ -43,6 +44,15 @@ export interface Highlight {
     icon: LucideIcon;
     title: string;
     description: string;
+}
+
+export interface Experience {
+    company: string;
+    position: string;
+    location: string;
+    period: string;
+    icon: LucideIcon;
+    description: string[];
 }
 
 export interface SiteConfig {

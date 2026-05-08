@@ -1,8 +1,28 @@
 
-import { Code, TrendingUp, Brain, Tv, Shield, Briefcase } from 'lucide-react';
+import { Code, TrendingUp, Brain, Tv, Shield, Briefcase, Globe, Cloud } from 'lucide-react';
 import { Project } from '../types/portfolio';
 
 export const projects: Project[] = [
+    {
+        title: 'Shnoor AI Trade Intelligence',
+        description:
+            'An enterprise-grade AI ecosystem for global trade. Features high-accuracy OCR for complex shipping documents, automated duty calculation engines, and predictive analytics for supply chain optimization.',
+        techStack: ['React', 'FastAPI', 'PostgreSQL', 'Python', 'OCR/AI'],
+        icon: Globe,
+        gradient: 'from-indigo-500/20 to-blue-500/20',
+        github: 'https://github.com/Moksha-132/AI-Imports-and-Exports-Website',
+        demo: 'https://ai-imports-and-exports-website.vercel.app',
+    },
+    {
+        title: 'CloudScale Storage Platform',
+        description:
+            'A modern, high-performance cloud storage architecture designed for security and speed. Implements advanced file management, real-time sync, and a sleek glassmorphic interface.',
+        techStack: ['React', 'Node.js', 'Express', 'Cloud APIs', 'UI/UX'],
+        icon: Cloud,
+        gradient: 'from-cyan-500/20 to-blue-500/20',
+        github: 'https://github.com/Moksha-132/Cloud-Platform',
+        demo: 'https://cloud-platform-ashen.vercel.app',
+    },
     {
         title: 'Live Code Editor',
         description:
@@ -47,14 +67,5 @@ export const projects: Project[] = [
         icon: Shield,
         gradient: 'from-emerald-500/20 to-teal-500/20',
         github: 'https://github.com/Moksha-132/Cyber-Attack-Detection-in-WSNs',
-    },
-    {
-        title: 'HireHub – Job Portal',
-        description:
-            'A full-stack AI-powered job portal with multi-role dashboards for Admins, Managers, and Users. Features an AI Concierge chatbot with reinforcement learning, real-time profile management, and a 3-service architecture using FastAPI, React, and a custom-trained NLP model.',
-        techStack: ['React', 'FastAPI', 'Python', 'NLP/ML', 'Node.js'],
-        icon: Briefcase,
-        gradient: 'from-orange-500/20 to-amber-500/20',
-        github: 'https://github.com/Moksha-132/HireHub---Job-Portal-',
     },
 ];

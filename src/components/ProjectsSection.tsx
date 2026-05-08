@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import { projects } from '@/data';
 import { SectionBackground } from './SectionBackground';
 
@@ -59,12 +59,20 @@ export const ProjectsSection = () => {
 
                 {/* Actions */}
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="w-full" asChild>
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 mr-2" />
-                      View Project on GitHub
+                      GitHub
                     </a>
                   </Button>
+                  {project.demo && (
+                    <Button variant="default" size="sm" className="flex-1" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </article>
