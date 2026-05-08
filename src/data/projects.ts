@@ -31,6 +31,7 @@ export const projects: Project[] = [
         icon: Code,
         gradient: 'from-violet-500/20 to-purple-500/20',
         github: 'https://github.com/Moksha-132/Online-Live-Code-Editor',
+        demo: 'https://online-live-code-editor.vercel.app/',
     },
     {
         title: 'AI Data Insights',
